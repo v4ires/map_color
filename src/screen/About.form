@@ -72,7 +72,7 @@
           <Properties>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Colora&#xe7;&#xe3;o de Mapas v0.1 2013-2&#xa;&#xa;Trabalho de Algoritmo e Teoria dos Grafos&#xa;&#xa;Dupla: Vin&#xed;cius Aires Barros&#xa;Cez&#xe1;nne Alves&#xa;&#xa;Universidade Federal do Tocantins&#xa;UFT-Palmas&#xa;&#xa;2014&#xa;Direito Reservados"/>
+            <Property name="text" type="java.lang.String" value="Colora&#xe7;&#xe3;o de Mapas v0.1 2013-2&#xa;&#xa;Trabalho de Algoritmo e Teoria dos Grafos&#xa;&#xa;Dupla: Vin&#xed;cius Aires Barros&#xa;Cez&#xe1;nne Alves&#xa;&#xa;Universidade Federal do Tocantins&#xa;UFT-Palmas&#xa;&#xa;2014&#xa;Todos os Direitos Reservados"/>
           </Properties>
         </Component>
       </SubComponents>

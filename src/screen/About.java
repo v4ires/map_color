@@ -46,7 +46,7 @@ public class About extends javax.swing.JFrame {
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Coloração de Mapas v0.1 2013-2\n\nTrabalho de Algoritmo e Teoria dos Grafos\n\nDupla: Vinícius Aires Barros\nCezánne Alves\n\nUniversidade Federal do Tocantins\nUFT-Palmas\n\n2014\nDireito Reservados");
+        jTextArea1.setText("Coloração de Mapas v0.1 2013-2\n\nTrabalho de Algoritmo e Teoria dos Grafos\n\nDupla: Vinícius Aires Barros\nCezánne Alves\n\nUniversidade Federal do Tocantins\nUFT-Palmas\n\n2014\nTodos os Direitos Reservados");
         jScrollPane1.setViewportView(jTextArea1);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/screen/logo.png"))); // NOI18N

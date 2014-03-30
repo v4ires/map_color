@@ -1,8 +1,30 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/**********************************************************************************************
+** A aplicação consiste em um simulador onde foram implementados métodos heurísticos para a 
+** coloração de Mapas usando a modelagem em Grafos, foi utilizada como critério de avaliação da 
+** disciplina de Algoritmo e Teoria dos Grafos.
+**
+** Ciência da Computação
+** Universidade Federal do Tocantins - UFT/Palmas
+**
+** Coloring Map foi desenvolvido com o intuito de demonstrar algoritmos heurísticos para resolver 
+** o problema de coloração de de Grafos. A aplicação foi desenvolvida na linguagem de 
+** programação Java em conjunto com a biblioteca de visualização de Grafos Graph Stream que 
+** pode ser acessada a partir desse link:
+** http://graphstream-project.org/
+**
+** Peço encarecidamente se você for utilizar o software que mantenha o nome dos Autores, se for 
+** alterá-lo seja para corrigir um bug ou adequar a sua necessidade favor mande um e-mail para, 
+** viniciusaires7@gmail.com descrevendo suas alterações e em anexo o código com tais mudanças.
+**
+**
+** Desenvolvido por:
+**                   Vinicius Aires Barros
+**                   Cézanne Alves
+**
+** Contato: Vinícius Aires Barros (viniciusaires7@gmail.com)
+**          Cézanne Alves (cezannealves@gmail.com)
+***********************************************************************************************/
+
 package screen;
 
 import entidades.Grafo;
@@ -17,10 +39,6 @@ import org.graphstream.graph.Graph;
 import org.graphstream.ui.swingViewer.View;
 import org.graphstream.ui.swingViewer.Viewer;
 
-/**
- *
- * @author Vinícius
- */
 public class TelaPrincipal extends javax.swing.JFrame {
 
     Grafo g;
@@ -29,9 +47,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
     Viewer viewer;
     View view;
 
-    /**
-     * Creates new form TelaPrincipal
-     */
     public TelaPrincipal() {
         initComponents();
         setLocationRelativeTo(null);

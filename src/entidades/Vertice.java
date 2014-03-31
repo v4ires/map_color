@@ -29,17 +29,14 @@ package entidades;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author Vinícius
- */
 public class Vertice{  
     private String label;
     private String cor;
     private String id;
-    private ArrayList<Vertice> listaDeAdjacencia = new ArrayList<>();
+    private ArrayList<Vertice> listaDeAdjacencia;
 
     public Vertice(String label, String id) {
+        listaDeAdjacencia = new ArrayList<>();
         this.label = label;
         this.cor = "";
         this.id = id;

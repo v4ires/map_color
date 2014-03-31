@@ -96,7 +96,7 @@ public class Processo extends Thread {
                 break;
         }
         long f = System.nanoTime();
-        long t = (f - i);
+        long t = (f - i) - g.getTime();
         if (g.isColorido()) {
             JOptionPane.showMessageDialog(null, "Número de cores usada foi\n" + g.getNumeroCromatico() + " cores\nEm " + t + " *10^-9 segundos");
         }

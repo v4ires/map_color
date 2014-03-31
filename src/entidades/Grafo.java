@@ -76,7 +76,7 @@ public class Grafo {
     public void setTime(Long time) {
         this.time = time;
     }
-
+    
     public Vertice getVertice(String label) {
         for (Vertice v : listaDeVertices) {
             if (v.getLabel().equals(label)) {

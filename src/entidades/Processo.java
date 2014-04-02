@@ -85,7 +85,7 @@ public class Processo extends Thread {
                 } else {
                     v = g.getVertice(label);
                     if (v != null) {
-                        g.dfsColoring(graph, v);
+                        g.bfsColoring(graph, v);
                     } else {
                         JOptionPane.showMessageDialog(null, "Vertice não encontrado!");
                     }

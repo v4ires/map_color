@@ -99,9 +99,8 @@ public class Grafo {
                 }
             }
             return contCor.size();
-        } else {
-            return -1;
         }
+        return -1;
     }
 
     public void addAdjacencia(Vertice x, Vertice y) {
@@ -208,20 +207,18 @@ public class Grafo {
                 }
             }
         }
-        try {
-            if (!coresAdj.isEmpty()) {
-                v.setCor(coresAdj.get(0));
-            }
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
+        if (coresAdj.size() > 0) {
+            v.setCor(coresAdj.get(0));
+        }else{
+            System.err.println("Poucas Cores...");
+            return;
         }
-
     }
 
     public void dfsColoring(Graph graph, Vertice v) {
         if (v.getCor().length() == 0) {
             colorirVertice(v);
-            pausa(time);
+            pausa();
             graph.addAttribute("ui.stylesheet", "node#" + v.getId() + "{ fill-color: " + v.getCor() + "; size : 15px;}");
             for (Vertice w : v.getListaDeAdjacencia()) {
                 dfsColoring(graph, w);
@@ -241,7 +238,7 @@ public class Grafo {
                 if (w.getCor().length() == 0) {
                     colorirVertice(w);
                     graph.addAttribute("ui.stylesheet", "node#" + w.getId() + "{ fill-color: " + w.getCor() + "; size : 15px;}");
-                    pausa(time);
+                    pausa();
                     fila.add(w);
                 }
             }
@@ -253,13 +250,13 @@ public class Grafo {
         String resultdo = "";
         for (Vertice v : listaDeVertices) {
             colorirVertice(v);
-            pausa(time);
+            pausa();
             graph.addAttribute("ui.stylesheet", "node#" + v.getId() + "{ fill-color: " + v.getCor() + "; size : 15px;}");
         }
         setColorido(true);
     }
 
-    private void pausa(long time) {
+    private void pausa() {
         try {
             Thread.sleep(time);
         } catch (InterruptedException ex) {

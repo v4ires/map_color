@@ -1,30 +1,23 @@
-/**********************************************************************************************
-** A aplicação consiste em um simulador onde foram implementados métodos heurísticos para a 
-** coloração de Mapas usando a modelagem em Grafos, foi utilizada como critério de avaliação da 
-** disciplina de Algoritmo e Teoria dos Grafos.
-**
-** Ciência da Computação
-** Universidade Federal do Tocantins - UFT/Palmas
-**
-** Coloring Map foi desenvolvido com o intuito de demonstrar algoritmos heurísticos para resolver 
-** o problema de coloração de de Grafos. A aplicação foi desenvolvida na linguagem de 
-** programação Java em conjunto com a biblioteca de visualização de Grafos Graph Stream que 
-** pode ser acessada a partir desse link:
-** http://graphstream-project.org/
-**
-** Peço encarecidamente se você for utilizar o software que mantenha o nome dos Autores, se for 
-** alterá-lo seja para corrigir um bug ou adequar a sua necessidade favor mande um e-mail para, 
-** viniciusaires7@gmail.com descrevendo suas alterações e em anexo o código com tais mudanças.
-**
-**
-** Desenvolvido por:
-**                   Vinicius Aires Barros
-**                   Cézanne Alves
-**
-** Contato: Vinícius Aires Barros (viniciusaires7@gmail.com)
-**          Cézanne Alves (cezannealves@gmail.com)
-***********************************************************************************************/
-
+/**
+ * ********************************************************************************************
+ ** A aplicação consiste em um simulador onde foram implementados métodos
+ * heurísticos para a * coloração de Mapas usando a modelagem em Grafos, foi
+ * utilizada como critério de avaliação da * disciplina de Algoritmo e Teoria
+ * dos Grafos. * * Ciência da Computação * Universidade Federal do Tocantins -
+ * UFT/Palmas * * Coloring Map foi desenvolvido com o intuito de demonstrar
+ * algoritmos heurísticos para resolver * o problema de coloração de de Grafos.
+ * A aplicação foi desenvolvida na linguagem de * programação Java em conjunto
+ * com a biblioteca de visualização de Grafos Graph Stream que * pode ser
+ * acessada a partir desse link: * http://graphstream-project.org/ * * Peço
+ * encarecidamente se você for utilizar o software que mantenha o nome dos
+ * Autores, se for * alterá-lo seja para corrigir um bug ou adequar a sua
+ * necessidade favor mande um e-mail para, * viniciusaires7@gmail.com
+ * descrevendo suas alterações e em anexo o código com tais mudanças. * * *
+ * Desenvolvido por: * Vinicius Aires Barros * Cézanne Alves * * Contato:
+ * Vinícius Aires Barros (viniciusaires7@gmail.com) * Cézanne Alves
+ * (cezannealves@gmail.com)
+ * *********************************************************************************************
+ */
 package screen;
 
 import entidades.Grafo;
@@ -70,12 +63,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jButton1.setEnabled(false);
         jButton2.setEnabled(false);
     }
-    
-    public void habilitarSlider(){
+
+    public void habilitarSlider() {
         jSlider1.setEnabled(true);
     }
-    
-    public void desabilitarSlider(){
+
+    public void desabilitarSlider() {
         jSlider1.setEnabled(false);
     }
 
@@ -375,36 +368,43 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        Collections.sort(g.getListaDeVertices(), new Comparator<Vertice>() {
-            @Override
-            public int compare(Vertice o1, Vertice o2) {
-                if (o1.getGrau() < o2.getGrau()) {
-                    return -1;
+        if (!g.isThread_start()) {
+            Collections.sort(g.getListaDeVertices(), new Comparator<Vertice>() {
+                @Override
+                public int compare(Vertice o1, Vertice o2) {
+                    if (o1.getGrau() < o2.getGrau()) {
+                        return -1;
+                    }
+                    if (o1.getGrau() > o2.getGrau()) {
+                        return 1;
+                    }
+                    return 0;
                 }
-                if (o1.getGrau() > o2.getGrau()) {
-                    return 1;
-                }
-                return 0;
-            }
-        });
-        JOptionPane.showMessageDialog(null, "Ordenado com Sucesso!");
+            });
+            JOptionPane.showMessageDialog(null, "Ordenado com Sucesso!");
+        } else {
+            JOptionPane.showMessageDialog(null, "Processo de Coloração em Andamento");
+        }
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        Collections.sort(g.getListaDeVertices(), new Comparator<Vertice>() {
-
-            @Override
-            public int compare(Vertice o1, Vertice o2) {
-                if (o1.getGrau() < o2.getGrau()) {
-                    return 1;
+        if (!g.isThread_start()) {
+            Collections.sort(g.getListaDeVertices(), new Comparator<Vertice>() {
+                @Override
+                public int compare(Vertice o1, Vertice o2) {
+                    if (o1.getGrau() < o2.getGrau()) {
+                        return 1;
+                    }
+                    if (o1.getGrau() > o2.getGrau()) {
+                        return -1;
+                    }
+                    return 0;
                 }
-                if (o1.getGrau() > o2.getGrau()) {
-                    return -1;
-                }
-                return 0;
-            }
-        });
-        JOptionPane.showMessageDialog(null, "Ordenado com Sucesso!");
+            });
+            JOptionPane.showMessageDialog(null, "Ordenado com Sucesso!");
+        } else {
+            JOptionPane.showMessageDialog(null, "Processo de Coloração em Andamento");
+        }
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed

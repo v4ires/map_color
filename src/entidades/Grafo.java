@@ -41,12 +41,14 @@ public class Grafo {
     private final ArrayList<Vertice> listaDeVertices;
     private final ArrayList<String> listaDeCores;
     private boolean colorido;
+    private boolean thread_start;
     private Long time;
 
     public Grafo() {
         listaDeCores = new ArrayList<>();
         listaDeVertices = new ArrayList<>();
         colorido = false;
+        thread_start = false;
         listaDeCores.add("red");
         listaDeCores.add("blue");
         listaDeCores.add("yellow");
@@ -69,13 +71,17 @@ public class Grafo {
         this.colorido = colorido;
     }
 
-    public Long getTime() {
-        return time;
-    }
-
     public void setTime(Long time) {
         this.time = time;
     }
+
+    public boolean isThread_start() {
+        return thread_start;
+    }
+
+    public void setThread_start(boolean thread_start) {
+        this.thread_start = thread_start;
+    }   
     
     public Vertice getVertice(String label) {
         for (Vertice v : listaDeVertices) {

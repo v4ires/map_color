@@ -47,6 +47,7 @@ public class Processo extends Thread {
 
     @Override
     public void run() {
+        g.setThread_start(true);
         frame.desabilitarBotoes();
         frame.habilitarSlider();
         long i = System.nanoTime();
@@ -97,5 +98,6 @@ public class Processo extends Thread {
         JOptionPane.showMessageDialog(null, "Número de cores usada foi\n" + g.getNumeroCromatico() + " cores\nEm " + t + " *10^-9 segundos");
         frame.habilitarBotoes();
         frame.desabilitarSlider();
+        g.setThread_start(false);
     }
 }

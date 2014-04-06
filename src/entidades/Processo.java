@@ -68,7 +68,7 @@ public class Processo extends Thread {
                 g.greddyColoring(graph);
                 break;
             case 1:
-                if (str.length() == 0) {
+                if (str.length() == 0 || str.contains("-")) {
                     g.dfsColoring(graph, g.getVerticeMaiorGrau());
                 } else {
                     v = g.getVertice(label);
@@ -81,7 +81,7 @@ public class Processo extends Thread {
                 break;
 
             case 2:
-                if (str.length() == 0) {
+                if (str.length() == 0 || str.contains("-")) {
                     g.bfsColoring(graph, g.getVerticeMaiorGrau());
                 } else {
                     v = g.getVertice(label);

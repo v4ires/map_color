@@ -54,7 +54,7 @@ public class About extends javax.swing.JFrame {
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Coloração de Mapas v0.1 2013-2\n\nTrabalho de Algoritmo e Teoria dos Grafos\n\nDupla: Vinícius Aires Barros\nCezánne Alves\n\nUniversidade Federal do Tocantins\nUFT-Palmas\n\n2014\nTodos os Direitos Reservados");
+        jTextArea1.setText("Coloração de Mapas v0.1 2013-2\n\nTrabalho de Algoritmo e Teoria dos Grafos\n\nDupla: Vinícius Aires Barros\nCezánne Alves\n\nUniversidade Federal do Tocantins\nUFT-Palmas\n\nAPI: Java JDK 7, Graph Stream\n\n2014\nTodos os Direitos Reservados");
         jScrollPane1.setViewportView(jTextArea1);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/screen/logo.png"))); // NOI18N
@@ -67,16 +67,15 @@ public class About extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(26, 26, 26)
-                        .addComponent(jLabel1)
-                        .addGap(49, 49, 49))))
+                .addContainerGap(141, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(42, 42, 42)
+                .addComponent(jLabel1)
+                .addGap(33, 33, 33))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -89,8 +88,8 @@ public class About extends javax.swing.JFrame {
                         .addGap(46, 46, 46)
                         .addComponent(jLabel2)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();

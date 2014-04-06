@@ -349,22 +349,27 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        JFileChooser abrirArquivo = new JFileChooser();
-        int value = abrirArquivo.showOpenDialog(null);
-        if (value == JFileChooser.APPROVE_OPTION) {
-            File f = abrirArquivo.getSelectedFile();
-            g.getListaDeVertices().removeAll(g.getListaDeVertices());
-            g.setColorido(false);
-            g.lerArquivo(f);
-            graph.clear();
-            graph = g.plotarGrafo();
-            viewer.close();
-            viewer = graph.display();
-            viewer.enableAutoLayout();
-            view = viewer.getDefaultView();
-            jPanel1.add(view);
-            view.openInAFrame(false);
+        if (!g.isThread_start()) {
+            JFileChooser abrirArquivo = new JFileChooser();
+            int value = abrirArquivo.showOpenDialog(null);
+            if (value == JFileChooser.APPROVE_OPTION) {
+                File f = abrirArquivo.getSelectedFile();
+                g.getListaDeVertices().removeAll(g.getListaDeVertices());
+                g.setColorido(false);
+                g.lerArquivo(f);
+                graph.clear();
+                graph = g.plotarGrafo();
+                viewer.close();
+                viewer = graph.display();
+                viewer.enableAutoLayout();
+                view = viewer.getDefaultView();
+                jPanel1.add(view);
+                view.openInAFrame(false);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Processo de Coloração em Andamento");
         }
+
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed

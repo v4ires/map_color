@@ -51,7 +51,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         view = viewer.getDefaultView();
         view.openInAFrame(false);
         jPanel1.add(view);
-        jSlider1.setEnabled(false);
+        jSlider1.setEnabled(true);
     }
 
     public void habilitarBotoes() {
@@ -70,6 +70,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     public void desabilitarSlider() {
         jSlider1.setEnabled(false);
+    }
+
+    public long getJSliderValue() {
+        return Long.parseLong("" + jSlider1.getValue());
     }
 
     public String getTex1() {

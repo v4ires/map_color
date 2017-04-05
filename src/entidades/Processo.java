@@ -51,7 +51,7 @@ public class Processo extends Thread {
         frame.desabilitarBotoes();
         frame.habilitarSlider();
         long i = System.nanoTime();
-        long time = 0;
+        long time = frame.getJSliderValue();
         String str, label = null;
         str = frame.getTex1();
 
@@ -97,7 +97,7 @@ public class Processo extends Thread {
         long t = (f - i);
         JOptionPane.showMessageDialog(null, "Número de cores usada foi\n" + g.getNumeroCromatico() + " cores\nEm " + t + " *10^-9 segundos");
         frame.habilitarBotoes();
-        frame.desabilitarSlider();
+        //frame.desabilitarSlider();
         g.setThread_start(false);
     }
 }
